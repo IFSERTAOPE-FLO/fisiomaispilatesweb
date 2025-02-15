@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e3f2fd; /* Fundo claro e sutil */
+}
+
+.container {
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.form-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 2px solid #bbdefb;
+    margin-bottom: 2rem;
+}
+
+.form-header .titulo h1 {
+    font-size: 1.5rem;
+    color: #15b9e3;
+}
+
+.botao-voltar {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background-color: #15b9e3; /* Cor principal */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botao-voltar:hover {
+    background-color: #0e8db8;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+.input-box {
+    width: 100%; /* Ajuste para usar 100% do espaço disponível */
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: 1rem;
+    color: #15b9e3;
+}
+
+.input-box input {
+    margin-top: 0.5rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid #90caf9;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-box input:focus {
+    outline: 2px solid #15b9e3; /* Destaque ao focar no campo */
+}
+
+.continue-button {
+    width: 100%;
+    margin-top: 1.5rem;
+    text-align: center; /* Centraliza o botão */
+}
+
+.continue-button button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    background-color: #15b9e3;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.continue-button button:hover {
+    background-color: #0e8db8;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}

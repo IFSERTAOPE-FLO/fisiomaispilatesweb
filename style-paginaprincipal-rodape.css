@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+
+
+
+
+
+
+
+/* Responsivo */
+@media (max-width: 999px) {
+    .box {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .box {
+        width: 100%;
+    }
+}
+
+/* Seção CTA */
+.cta-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #15b9e3; 
+    padding: 20px 30px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    max-width: 100%;
+    margin: 40px auto;
+    gap: 10rem;
+}
+
+.cta-section p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.cta-button {
+    background-color: white;
+    color: #00a9e0;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* Estilização do Título */
+h1 {
+    color: #14b8e2;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Linha divisória */
+.divider {
+    width: 60px;
+    height: 4px;
+    background-color: #14b8e2;
+    margin: 20px auto;
+    border-radius: 50px;
+}
+
+/* Layout das Cartas */
+.grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 220px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to top, white, rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagens das Cartas */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #15b9e3;
+    padding: 50px 0;
+    margin-top: 40px;
+}
+
+
+
+
+footer .content {
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 40px 40px 40px;
+}
+
+
+
+
+footer .content .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+
+
+
+footer .content .top .logo-details {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+
+
+
+footer .content .top .media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+footer .content .top .media-icons a {
+    height: 40px;
+    width: 40px;
+    margin: 0 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 40px;
+    color: #ffffff;
+    font-size: 17px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+
+
+
+footer .content .top .media-icons a:hover {
+    background-color: white;
+    color: #15b9e3;
+}
+
+
+
+
+footer .content .link-boxes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 0.4px solid #ffffff;
+}
+
+
+
+
+footer .content .link-boxes .box {
+    width: 25%;
+    padding: 0 10px;
+}
+
+
+
+
+footer .content .link-boxes .box h4 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+}
+
+
+
+
+footer .content .link-boxes .box ul {
+    list-style: none;
+}
+
+
+
+
+footer .content .link-boxes .box ul li {
+    margin: 6px 0;
+}
+
+
+
+
+footer .content .link-boxes .box ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+
+
+
+footer .content .link-boxes .box ul li a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+
+
+
+footer .content .link-boxes .box .form-sub input {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background-color: #15b9e3;
+}
+
+
+
+
+footer .content .link-boxes .box .form-sub input::placeholder {
+    color: #ffffff;
+}
+
+
+
+
+footer .content .link-boxes .box .form-sub button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #15b9e3;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+
+
+
+
+footer .bottom-details {
+    width: 100%;
+}
+
+
+
+
+footer .bottom-details .bottom_text {
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+footer .bottom-details .bottom_text span,
+footer .bottom-details .bottom_text a {
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+
+
+
+footer .bottom-details .bottom_text a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+
+
+
+footer .bottom-details .bottom_text a {
+    margin-right: 10px;
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+
+    footer .content .link-boxes .box {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+
+
+
+    footer .content .top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+
+
+    footer .content .top .media-icons {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+   
+
+
+    footer .content .link-boxes .box {
+        width: 100%;
+    }
+
+
+
+
+    footer .bottom-details .bottom_text {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+
+
+    footer .bottom-details .bottom_text span,
+    footer .bottom-details .bottom_text a {
+        margin: 5px 0;
+    }
+}
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de Senha</title>
+    <link rel="stylesheet" href="senha.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="titulo">
+                        <h1>Recuperar Senha</h1>
+                    </div>
+                    <div class="login-button">
+                        <a href="login.html" class="botao-voltar">Voltar</a>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Telefone</label>
+                        <input id="number" type="tel" name="number" placeholder="(xx)xxxx-xxxxx" required>
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button type="submit" onclick="RecuperarSenha(); return false">Recuperar Senha</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function RecuperarSenha() {
+          var email = document.getElementById("email").value;
+          var number = document.getElementById("number").value;
+    
+          if (email == "anagabrielly@gmail.com" && number == "87999160370") {
+            alert('Enviando nova senha...');
+            window.location.href = "login.html";
+          } else {
+            alert('E-mail ou número de telefone incorreto');
+          }
+        }
+    </script>
+
+</body>
+</html>

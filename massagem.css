@@ -1,0 +1,107 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .conteiner {
+    width: 75%;
+    height: 650px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .conteiner-servico {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    justify-content: center;
+  }
+  h1{
+    text-align: center;
+    font-size: 50px;
+  }
+  .alívio{
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid #15b9e3;
+    border-radius: 10px;
+    font-size: smaller;
+    background-color: #15b9e3;
+  }
+  .linha{
+    border-top: 1px solid white;
+  }
+  .conteiner-pilates {
+    margin-top: 20px;
+  }
+  
+  .redução {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid #15b9e3;
+    border-radius: 10px;
+    font-size: smaller;
+    background-color: #15b9e3;
+  }
+  .relaxamento{
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid #15b9e3;
+    border-radius: 10px;
+    font-size: smaller;
+    background-color: #15b9e3; 
+  }
+  .circulação{
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid #15b9e3;
+    border-radius: 10px;
+    font-size: smaller;
+    background-color: #15b9e3;
+  }
+  .correção{
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid #15b9e3;
+    border-radius: 10px;
+    font-size: smaller;
+    background-color: #15b9e3;
+  } 
+  .bem-estar{
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid #15b9e3;
+    border-radius: 10px;
+    font-size: smaller;
+    background-color: #15b9e3;
+  } 
+  .links, a{
+    border: 1px solid #15b9e3;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #15b9e3;
+  }
+  .links, a:hover{
+    background-color: #15b9e3;
+    color: white;
+  }
+  .texto-sobre-pilates {
+    width: 60%;
+    text-align: left;
+  }
+  
+  .imagem-sobre-pilates {
+    width: 35%;
+    text-align: center;
+  }
+  
+  .imagem-sobre-pilates img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  

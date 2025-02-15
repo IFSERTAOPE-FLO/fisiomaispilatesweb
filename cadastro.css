@@ -1,0 +1,96 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #15b9e3;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    padding: 20px;
+    overflow: hidden; /* Evita scroll */
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background-color: #15b9e3;
+}
+
+/* Estilização do formulário */
+.form {
+    width: 100%;
+    max-width: 80%; /* Mantendo um tamanho padrão */
+    padding: 2rem;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #15b9e3; /* Cor igual ao do cliente */
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #15b9e3; /* Cor padronizada */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #15b9e3;
+    border-radius: 0;
+}
+
+.input-group input:focus {
+    outline: 2px solid #15b9e3;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #15b9e3;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0d94b1;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+    }
+}

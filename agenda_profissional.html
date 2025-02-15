@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda do Profissional</title>
+    <link rel="stylesheet" href="agenda_profissional.css">
+        <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts para a seção de texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="styles-rodape.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            
+            <button class="hamburger"></button>
+    
+            <ul class="lista-de-links">
+                
+                <li><a href="PaginaInicial-Profissional.html"> Inicio</a></li>
+                <li><a href="contato.html"> Fale conosco</a></li>
+                <li><a href="cuidados.html"> Serviços</a></li>
+
+            </ul>       
+        </nav>
+    </header>
+
+    <main>
+        <section class="navegacao-calendario">
+            <div id="anterior">
+                <a href="#">
+                <img src="img/arrow-left.png" alt="back">
+                </a>
+            </div>
+            <h1 id="mes-ano">Fevereiro 2025</h1>
+            <div id="proximo">
+                <a href="#">
+                <img src="img/arrow-right.png" alt="after">
+                </a>
+            </div>
+            <div id="visualizacao">
+                <button class="view-btn ativo" data-visualizacao="diaria">Diária</button>
+                <button class="view-btn" data-visualizacao="semanal">Semanal</button>
+                <button class="view-btn" data-visualizacao="mensal">Mensal</button>
+            </div>
+        </section>
+
+        <section id="calendario">
+            <div id="grade-calendario">
+                <div class="hora">08:30</div>
+                <div class="compromisso">
+                    <span>Cliente:</span> Maria Souza<br>
+                    <span>Serviço:</span> Consulta<br>
+                    <span>Status:</span> <span class="status agendado">Agendado</span>
+                </div>
+
+                <div class="hora">10:00</div>
+                <div class="compromisso">
+                    <span>Cliente:</span> Pedro Lima<br>
+                    <span>Serviço:</span> Terapia<br>
+                    <span>Status:</span> <span class="status realizado">Realizado</span>
+                </div>
+
+                <div class="hora">13:15</div>
+                <div class="compromisso">
+                    <span>Cliente:</span> Arthur Pinóquio<br>
+                    <span>Serviço:</span> Avaliação<br>
+                    <span>Status:</span> <span class="status cancelado">Cancelado</span>
+                </div>
+            </div>
+        </section>
+
+        <aside id="resumo-dia">
+            <h3>Resumo do Dia</h3>
+            <p>Total de Compromissos: 3</p>
+            <p>Realizados: 1</p>
+            <p>Cancelados: 1</p>
+            <p>Horários Livres: 5</p>
+        </aside>
+
+        <!--CHECK IN-->
+
+        <section id="agendamentos">
+            <h2>Agendamentos do Dia</h2>
+            <div class="agendamento">
+                <div class="informacoes">
+                    <p><strong>Cliente:</strong> Maria Souza</p>
+                    <p><strong>Horário:</strong> 08:30</p>
+                    <p><strong>Serviço:</strong> Consulta</p>
+                </div>
+                <div class="acoes">
+                    <button class="botao presente">Presente</button>
+                    <button class="botao ausente">Ausente</button>
+                    <button class="botao remarcar">Remarcar</button>
+                </div>
+            </div>
+
+            <div class="agendamento">
+                <div class="info">
+                    <p><strong>Cliente:</strong> Pedro Lima</p>
+                    <p><strong>Horário:</strong> 10:00</p>
+                    <p><strong>Serviço:</strong> Terapia</p>
+                </div>
+                <div class="acoes">
+                    <button class="botao presente">Presente</button>
+                    <button class="botao ausente">Ausente</button>
+                    <button class="botao remarcar">Remarcar
+                    </button>
+                </div>
+            </div>
+
+            <div class="agendamento">
+                <div class="info">
+                    <p><strong>Cliente:</strong> Arthur Pinóquio</p>
+                    <p><strong>Horário:</strong> 13:15</p>
+                    <p><strong>Serviço:</strong> Pilates</p>
+                </div>
+                <div class="acoes">
+                    <button class="botao presente">Presente</button>
+                    <button class="botao ausente">Ausente</button>
+                    <button class="botao remarcar">Remarcar</button>
+                </div>
+            </div>
+
+
+<div id="remarcar" class="janela">
+    <div class="janela-conteudo">
+        <span class="fechar">&times;</span>
+        <h3>Remarcar Agendamento</h3>
+        <form>
+            <label for="nova-data">Nova Data:</label>
+            <input type="date" id="nova-data" required>
+
+            <label for="novo-horario">Novo Horário:</label>
+            <input type="time" id="novo-horario" required>
+
+            <button type="submit" class="botao salvar">Salvar</button>
+        </form>
+    </div>
+</div>
+
+
+
+        </section>
+    </main>
+
+    <script src="pagina-principalagendamento-codigo.js"></script>
+
+</body>
+</html>

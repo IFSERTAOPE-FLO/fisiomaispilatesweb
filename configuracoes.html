@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações Gerais</title>
+    <link rel="stylesheet" href="configuracoes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="mobile-navbar.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            
+            <button class="hamburger"></button>
+    
+            <ul class="lista-de-links">
+                
+                <li><a href="PaginaInicial-Profissional.html"> Inicio</a></li>
+                <li><a href="contato.html"> Fale conosco</a></li>
+                <li><a href="cuidados.html"> Serviços</a></li>
+
+            </ul>       
+        </nav>
+    </header>
+    
+    <div class="area-da-linha">
+        <div class="linha-da-nav"></div>
+    </div>
+    <main>
+        <!-- Seção para Administrador -->
+        <section class="admin-section">
+            <form>
+                <h3>Gerenciar Dados</h3>
+                <label for="admin-name">Nome:</label>
+                <input type="text" id="admin-name" placeholder="Digite o novo nome">
+
+
+                <label for="admin-address">Endereço:</label>
+                <input type="text" id="admin-address" placeholder="Digite o novo endereço">
+
+
+                <label for="admin-phone">Telefone:</label>
+                <input type="tel" id="admin-phone" placeholder="Digite o novo telefone">
+
+
+                <label for="admin-email">E-mail:</label>
+                <input type="email" id="admin-email" placeholder="Digite o novo e-mail">
+            </form>
+        </section>
+
+
+        <section class="client-section">
+            <h2>Área do Cliente</h2>
+            <form>
+                <h3>Seus Dados</h3>
+                <p>Nome: Fulano The town</p>
+                <p>Endereço: Rua Exemplo, 123</p>
+                <p>Telefone: (11) 98765-4321</p>
+                <p>E-mail: Fisiopilates@gmail.com</p>
+                <p>Senha: ******</p>
+
+
+                <button type="button" id="edit-btn">Editar</button>
+                <button type="submit" id="save-btn" class="save-btn" style="display: none;">Salvar</button>
+           
+            </form>
+        </section>
+
+
+        <!-- Seção para Cliente -->
+        <section class="client-section">
+            <h2>Área do Administrador</h2>
+            <form>
+                <h3>Dados do Consultório</h3>
+                <p>Nome: Consultório Modelo</p>
+                <p>Endereço: Rua Exemplo, 123</p>
+                <p>Telefone: (11) 98765-4321</p>
+                <p>E-mail: contato@consultorio.com</p>
+
+
+                <h3>Horários de Funcionamento</h3>
+                <p>Abertura: 08:00</p>
+                <p>Fechamento: 18:00</p>
+            </form>
+        </section>
+
+
+        <!-- Seção de Configurações Gerais -->
+        <section class="settings-section">
+            <h2>Configurações Gerais</h2>
+            <form>
+
+
+                <label>
+                    <input type="checkbox" id="auto-update">
+                    Atualizar Automaticamente
+                </label>
+
+
+                <label>
+                    <input type="checkbox" id="dark-mode">
+                    Ativar Modo Escuro
+                </label>
+
+
+                <h3>Notificações</h3>
+                <label><input type="checkbox"> Permitir Notificações</label>
+                <label><input type="checkbox"> Notificações por E-mail</label>
+                <label><input type="checkbox"> Notificações por SMS</label>
+               
+                <h3>Segurança</h3>
+                <label><input type="checkbox"> Autenticação de Dois Fatores</label>
+                <label><input type="checkbox"> Encerrar Sessões Ativas</label>
+
+
+                <h3>Desempenho</h3>
+                <label><input type="checkbox"> Ativar Modo de Desempenho</label>
+                <label><input type="checkbox"> Limpar Cache e Dados</label>
+                <label for="session-timeout">Tempo de Inatividade:</label>
+                <input type="number" id="session-timeout" min="1" max="60" placeholder="Minutos">
+
+
+                <label for="language">Idioma:</label>
+                <select id="language">
+                    <option value="pt">Português</option>
+                    <option value="en">Inglês</option>
+                    <option value="es">Espanhol</option>
+                </select>
+
+
+            </form>
+        </section>
+
+
+        <button type="submit" class="save-btn">Salvar Configurações</button>
+    </main>
+    <footer>
+        <div class="content">
+            <div class="top">
+                <div class="logo-details">
+                    <i class="fab fa-logo-generico"></i>
+                    <span class="logo_name">Fisio & Pilates</span>
+                </div>
+                <div class="media-icons">
+                    <a href="https://wa.me/qr/L3MEVBMZJE3UN1" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://x.com/home" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="link-boxes">
+                <div class="box">
+                    <h4>Sobre nós</h4>
+                    <ul>
+                        <li><a href="#">Quem somos</a></li>
+                        <li><a href="#">Nossos serviços</a></li>
+                        <li><a href="https://policies.google.com/privacy?hl=pt-BR" target="_blank">Política de privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h4>Obter ajuda</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Agendamento de consultas</a></li>
+                        <li><a href="#">Dúvidas sobre serviços</a></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h4>Inscreva-se!</h4>
+                    <div class="form-sub">
+                        <form>
+                            <input type="email" placeholder="Digite seu e-mail" required>
+                            <button>Inscreva-se</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-details">
+            <div class="bottom_text">
+                <span class="copyright_text">Copyright &#169; 2025 <a href="#">Fisio & Pilates</a>. Todos os direitos reservados. | Recupere sua liberdade de movimento..</span>
+                <span class="policy_terms">
+                    <a href="https://policies.google.com/privacy?hl=pt-BR" target="_blank">Política de Privacidade</a>
+                    <a href="https://policies.google.com/terms?hl=pt-BR" target="_blank">Termos e Condições</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+

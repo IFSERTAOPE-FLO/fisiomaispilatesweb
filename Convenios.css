@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-image: url('https://numdea.com/wp-content/uploads/2020/01/en-que-consiste-convenio-colectivo-1024x683.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+.content {
+    margin-top: 4%;
+    position: relative;
+    z-index: 1;
+}
+
+
+.content h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+.content p {
+    font-size: 1.2em;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+
+.convenio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 180px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.convenio img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        justify-content: flex-start;
+    }
+
+
+    .convenio {
+        width: calc(33.33% - 20px);
+    }
+}
+.contact-info {
+    text-align: center;
+    margin: 40px 0;
+    font-family: 'Barlow', sans-serif;
+}
+
+
+.not-found {
+    color: #716f73; /* cinza */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+.contact-us {
+    color: #15b9e3; /* Azul */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+.contact-us a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+
+.contact-us a:hover {
+    text-decoration: underline;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: #15b9e3;
+    padding: 50px 0;
+    margin-top: auto;
+}
+
+
+footer .content {
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 40px 40px 40px;
+}
+
+
+footer .content .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+
+footer .content .top .logo-details {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+
+footer .content .top .media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer .content .top .media-icons a {
+    height: 40px;
+    width: 40px;
+    margin: 0 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 40px;
+    color: #ffffff;
+    font-size: 17px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+
+footer .content .top .media-icons a:hover {
+    background-color: white;
+    color: #15b9e3;
+}
+
+
+footer .content .link-boxes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 0.4px solid #ffffff;
+}
+
+
+footer .content .link-boxes .box {
+    width: 25%;
+    padding: 0 10px;
+}
+
+
+footer .content .link-boxes .box h4 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+}
+
+
+footer .content .link-boxes .box ul {
+    list-style: none;
+}
+
+
+footer .content .link-boxes .box ul li {
+    margin: 6px 0;
+}
+
+
+footer .content .link-boxes .box ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+
+footer .content .link-boxes .box ul li a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+
+footer .content .link-boxes .box .form-sub input {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background-color: #15b9e3;
+}
+
+
+footer .content .link-boxes .box .form-sub input::placeholder {
+    color: #ffffff;
+}
+
+
+footer .content .link-boxes .box .form-sub button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #15b9e3;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+
+
+footer .bottom-details {
+    width: 100%;
+}
+
+
+footer .bottom-details .bottom_text {
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+footer .bottom-details .bottom_text span,
+footer .bottom-details .bottom_text a {
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+
+footer .bottom-details .bottom_text a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+
+footer .bottom-details .bottom_text a {
+    margin-right: 10px;
+}
+
+
+@media (max-width: 768px) {
+    footer .content .link-boxes .box {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+
+    footer .content .top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    footer .content .top .media-icons {
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    footer .content .link-boxes .box {
+        width: 100%;
+    }
+
+
+    footer .bottom-details .bottom_text {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    footer .bottom-details .bottom_text span,
+    footer .bottom-details .bottom_text a {
+        margin: 5px 0;
+    }
+}
+
+
+/*CABEÇALHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.lista-de-links a {
+    color: #fff;
+    text-decoration: none; /*tira o sublinhado*/
+    transition: color 0.3s ease;
+    padding-block: 10px;
+}
+
+.lista-de-links a:hover{
+    color: #0d94b1;
+}
+
+.nav {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: end; /*vertical*/
+    font-family: system-ui, Helvetica, Arial, Sans-serif;
+    height: 45px;
+    padding-inline: 16px;
+    margin-inline: auto;
+ }
+
+.lista-de-links {       /*a lista no geral*/
+    list-style: none; /*tira a bolinha de tópico*/
+    display: flex;    /*faz os links nao ficar um em cima do outro*/
+    color: #fff;
+    gap: 32px; /*q isso?*/
+    text-decoration: none; /*tira o sublinhado*/
+}
+
+.lista-de-links li {   /*itens da lista individualmente*/
+ margin-left: 30px;
+ margin-right: 30px;
+ letter-spacing: 1px;
+}
+
+.area-da-linha{
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.linha-da-nav{
+    width: 740px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.header{
+    position: relative;
+    padding-inline: 16px; 
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.hamburger{
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+
+}
+
+@media (max-width: 750px) {
+    .hamburger {
+        display: block;
+        z-index: 1;
+    }
+
+    .lista-de-links{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #15b9e3;
+        clip-path: circle(0px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    .area-da-linha{
+        display: none;
+    }
+
+    .nav.active .lista-de-links {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    .nav.active .hamburger {
+        position: fixed;
+    }
+}

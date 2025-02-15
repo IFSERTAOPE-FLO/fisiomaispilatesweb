@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.7rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.section-title h2 {
+    color: #15b9b3;
+    font-size: 2.2em;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.section-title .subtitle {
+    color: black;
+    font-size: 1.2em;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background: white;
+}
+
+/* Features */
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-item:before {
+    content: "•";
+    color: #87a7b3;
+    font-size: 1.5em;
+}
+
+/* About Section */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 25px;
+    gap: 40px;
+    align-items: center;
+    padding: 40px 0;
+    background: #f9f9f9;
+}
+
+.about-content {
+    padding: 0 20px;
+}
+
+.about-image {
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(238, 238, 238, 0.3)
+    ),
+    url('https://th.bing.com/th/id/OIP.0S5xouq4ChfG-WdeACivPAHaE8?w=293&h=196&c=7&r=0&o=5&pid=1.7'); /* Substitua pela sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+}
+
+.about-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to left,
+        rgba(249, 249, 249, 0.9),
+        rgba(249, 249, 249, 0.3)
+    );
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 300px;
+    }
+    
+    .carousel-button {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .video-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+}

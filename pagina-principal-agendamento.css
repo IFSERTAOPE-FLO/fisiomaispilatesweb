@@ -1,0 +1,244 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+}
+
+a {
+   color: #fff;
+   text-decoration: none;
+   transition: 0.3s;
+}
+
+a:hover {
+   opacity: 0.7;
+}
+
+.elementos-populacao {
+   margin-top: 30px;
+   background-size: cover;
+   max-height: 92vh;
+   padding: 5% 5%;
+   background: url("https://www.itcvertebral.com.br/wp-content/uploads/2022/01/BG-TOPO.webp") no-repeat center center;
+}
+main {
+   margin-top: -1.7rem;
+}
+
+.Oquevcbusca h1 {
+   text-align: center;
+}
+
+.populacao-texto {
+   font-size: 2rem;
+   margin-left: 1rem;
+   color: #00a1a1;
+}
+
+.h2-1 {
+   color: #283e6f;
+}
+
+.elementos-paragrafo {
+   margin-top: 1.5rem;
+   margin-left: 1rem;
+   font-size: 1.3rem;
+   color: #262e3b;
+}
+
+.botao {
+   background-color: #0146a3;
+   width: fit-content;
+   border-radius: 50px;
+   padding: 12px;
+   margin-left: 1rem;
+   margin-top: 2rem;
+}
+
+.botao a {
+   font-size: 1.1rem;
+}
+
+.elementos-populacao-2a {
+   background-color: white;
+   padding: 70px 10px;
+   margin-top: 80px;
+   border-radius: 15px;
+}
+
+.populacao-2a-texto {
+   text-align: center;
+   color: #283e6f;
+   font-size: 1.7rem;
+}
+
+.populacao-2a-paragrafo {
+   margin-top: 2rem;
+}
+
+.populacao-2a-texto span {
+   color: #00a1a1;
+}
+
+.nav-list.active {
+   transform: translateX(0);
+}
+
+
+@media (max-width: 999px) {
+   body {
+       overflow-x: hidden;
+   }
+
+   .elementos-populacao {
+       padding: 5% 2%;
+   }
+
+   .populacao-texto,
+   .elementos-paragrafo {
+       margin-left: 0;
+       font-size: 1.5rem;
+   }
+
+   .botao {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+       margin-left: 0;
+       padding: 10px;
+       
+   }
+
+}
+
+
+.lista-de-links a {
+   color: #0d94b1;
+   text-decoration: none; /*tira o sublinhado*/
+   transition: color 0.3s ease;
+   padding-block: 10px;
+}
+
+
+.lista-de-links a:hover{
+   color: #15b9e3;
+}
+
+
+.nav {
+   max-width: 1200px;
+   display: flex;
+   justify-content: center;
+   align-items: end; /*vertical*/
+   font-family: system-ui, Helvetica, Arial, Sans-serif;
+   height: 45px;
+   padding-inline: 16px;
+   margin-inline: auto;
+}
+
+
+.lista-de-links {       /*a lista no geral*/
+   list-style: none; /*tira a bolinha de tópico*/
+   display: flex;    /*faz os links nao ficar um em cima do outro*/
+   color: #fff;
+   gap: 32px; /*q isso?*/
+   text-decoration: none; /*tira o sublinhado*/
+}
+
+
+.lista-de-links li {   /*itens da lista individualmente*/
+margin-left: 30px;
+margin-right: 30px;
+letter-spacing: 1px;
+}
+
+
+.area-da-linha{
+   display: flex;
+   height: 30px;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.linha-da-nav{
+   width: 740px;
+   height: 2px;
+   background-color: #15b9e3;
+}
+
+
+
+
+.header{
+   padding-inline: 16px;
+}
+
+
+.hamburger{
+   display: none;
+   border: none;
+   background: none;
+   border-top: 3px solid #fff;
+   cursor: pointer;
+}
+
+
+.hamburger::before,
+.hamburger::after {
+   content: " ";
+   display: block;
+   width: 30px;
+   height: 3px;
+   background: #fff;
+   margin-top: 5px;
+
+
+}
+
+
+@media (max-width: 750px) {
+   .hamburger {
+       display: block;
+       z-index: 1;
+   }
+
+
+   .lista-de-links{
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100vw;
+       height: 100vh;
+       background: #15b9e3;
+       clip-path: circle(0px at 90% -15%);
+       transition: 1s ease-out;
+
+
+       flex-direction: column;
+       justify-content: space-around;
+       align-items: center;
+       gap: 0;
+       pointer-events: none;
+   }
+
+
+   .area-da-linha{
+       display: none;
+   }
+
+
+   .nav.active .lista-de-links {
+       clip-path: circle(1500px at 90% -15%);
+       pointer-events: all;
+   }
+
+
+   .nav.active .hamburger {
+       position: fixed;
+   }
+}

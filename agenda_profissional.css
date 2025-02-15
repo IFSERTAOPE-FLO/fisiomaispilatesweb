@@ -1,0 +1,521 @@
+/* Estilo Geral */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+/* Navegação do Calendário */
+.navegacao-calendario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0rem 4rem 0rem;
+    background-color: #11B8E5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navegacao-calendario img {
+    width: 7rem;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.navegacao-calendario img:hover {
+    opacity: 0.7;
+}
+
+#mes-ano {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#visualizacao {
+    display: flex;
+}
+
+#visualizacao button:focus {
+    background-color: #0066cc;
+    color: white;
+}
+
+.view-btn {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+/* Grade do Calendário */
+#calendario {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+#grade-calendario {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+}
+
+.hora {
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #11B8E5;
+    border-radius: 19px;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+}
+
+.compromisso {
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-left: 5px solid #11B8E5;
+    border-radius: 5px;
+}
+
+.compromisso span {
+    font-weight: bold;
+}
+
+/* Status dos Compromissos */
+.status {
+    font-weight: bold;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+}
+
+.status.agendado {
+    color: white;
+    background-color: #0066cc;
+}
+
+.status.realizado {
+    color: white;
+    background-color: #28a745;
+}
+
+.status.cancelado {
+    color: white;
+    background-color: #dc3545;
+}
+
+/* Resumo do Dia */
+#resumo-dia {
+    margin-top: 5rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#resumo-dia h3 {
+    margin-bottom: 1rem;
+}
+
+
+/* Check-in */
+#agendamentos {
+    margin-top: 6rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.agendamento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.agendamento:last-child {
+    border-bottom: none;
+}
+
+.infomacoes p {
+    margin: 0.2rem 0;
+}
+
+.acoes {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.botao {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.botao.presente {
+    background-color: green;
+    color: white;
+}
+
+.botao.presente:focus {
+    background-color: #244f2e;
+    color: white;
+    outline: none;
+}
+
+.botao.ausente {
+    background-color: red;
+    color: white;
+}
+
+.botao.ausente:focus {
+    background-color: rgb(132, 38, 38);
+    color: white;
+    outline: none;
+}
+
+.botao.remarcar {
+    background-color: #11B8E5;
+    color: black;
+}
+
+.botao.remarcar:focus {
+    background-color: #26758b;
+    color: white;
+    outline: none;
+}
+
+/* janela de Remarcar */
+.janela {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.janela-conteudo {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.janela-conteudo h3 {
+    margin-top: 0;
+}
+
+.janela-conteudo .fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.janela-conteudo form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.janela-conteudo .botao.salvar {
+    background-color: #0066cc;
+    color: white;
+}
+
+/* Tablet (768px) */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header-info {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .logo-principal img {
+        width: 180px;
+    }
+
+    .navegacao-calendario {
+        padding: 1rem;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .navegacao-calendario img {
+        width: 4rem;
+    }
+
+    #mes-ano {
+        font-size: 1.5rem;
+        order: -1;
+        width: 100%;
+        text-align: center;
+    }
+
+    #visualizacao {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    #grade-calendario {
+        grid-template-columns: 80px 1fr;
+    }
+
+    .hora {
+        font-size: 1.2rem;
+        padding: 0.3rem;
+    }
+
+    .agendamento {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .acoes {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Mobile (480px) */
+@media screen and (max-width: 480px) {
+    .logo-principal img {
+        width: 150px;
+    }
+
+    .header-info {
+        font-size: 0.9rem;
+    }
+
+    .navegacao-calendario img {
+        width: 3rem;
+    }
+
+    #mes-ano {
+        font-size: 1.2rem;
+    }
+
+    .view-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    #grade-calendario {
+        grid-template-columns: 60px 1fr;
+    }
+
+    .hora {
+        font-size: 1rem;
+    }
+
+    .compromisso {
+        font-size: 0.9rem;
+    }
+
+    .acoes {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .botao {
+        width: 100%;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+}
+
+
+
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+
+
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+
+
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+
+
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.lista-de-links a {
+    color: #21a7c9;
+    text-decoration: none; /*tira o sublinhado*/
+    transition: color 0.3s ease;
+    padding-block: 10px;
+    font-size: 20px;    
+}
+
+.lista-de-links a:hover{
+    color: #5ddbfa;
+}
+
+.nav {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: end; /*vertical*/
+    font-family: system-ui, Helvetica, Arial, Sans-serif;
+    height: 45px;
+    padding-inline: 16px;
+    margin-inline: auto;
+ }
+
+.lista-de-links {       /*a lista no geral*/
+    list-style: none; /*tira a bolinha de tópico*/
+    display: flex;    /*faz os links nao ficar um em cima do outro*/
+    color: #fff;
+    gap: 32px; /*q isso?*/
+    text-decoration: none; /*tira o sublinhado*/
+}
+
+.lista-de-links li {   /*itens da lista individualmente*/
+ margin-left: 30px;
+ margin-right: 30px;
+ letter-spacing: 1px;
+}
+
+.area-da-linha{
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.linha-da-nav{
+    width: 740px;
+    height: 2px;
+    background-color: #15b9e3;
+}
+
+
+.header{
+    padding-inline: 16px; 
+}
+
+.hamburger{
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+
+}
+
+@media (max-width: 750px) {
+    .hamburger {
+        display: block;
+        z-index: 1;
+    }
+
+    .lista-de-links{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #15b9e3;
+        clip-path: circle(0px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    .area-da-linha{
+        display: none;
+    }
+
+    .nav.active .lista-de-links {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    .nav.active .hamburger {
+        position: fixed;
+    }
+}
